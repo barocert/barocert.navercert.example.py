@@ -35,9 +35,9 @@ for x in range(0,5):
     )    
 
 multiSign = NaverMultiSign(   
-    receiverHP = navercertService._encrypt('01054437896'),
-    receiverName = navercertService._encrypt('최상혁'),
-    receiverBirthday = navercertService._encrypt('19880301'),
+    receiverHP = navercertService._encrypt('01012341243'),
+    receiverName = navercertService._encrypt('홍길동'),
+    receiverBirthday = navercertService._encrypt('19700101'),
     reqTitle = '전자서명(복수) 요청 메시지 제목',
     reqMessage = navercertService._encrypt('전자서명(복수) 요청 메시지'),
     callCenterNum = '1588-1600',

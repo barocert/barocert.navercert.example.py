@@ -26,9 +26,9 @@ https://developers.barocert.com/reference/naver/python/sign/api-single#RequestSi
 clientCode = settings.ClientCode
 
 sign = NaverSign(        
-    receiverHP = navercertService._encrypt('01054437896'),
-    receiverName = navercertService._encrypt('최상혁'),
-    receiverBirthday = navercertService._encrypt('19880301'),
+    receiverHP = navercertService._encrypt('01012341234'),
+    receiverName = navercertService._encrypt('홍길동'),
+    receiverBirthday = navercertService._encrypt('19700101'),
     reqTitle = '전자서명(단건) 메시지 제목',
     reqMessage = navercertService._encrypt('전자서명(단건) 요청 메시지'),
     callCenterNum = '1588-1600',
