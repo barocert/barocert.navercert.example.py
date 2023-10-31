@@ -34,6 +34,13 @@ try :
     print(obj.state)
     print(obj.signedData)
     print(obj.ci)
+    print(obj.receiverName)
+    print(obj.receiverDay)
+    print(obj.receiverYear)
+    print(obj.receiverHP)
+    print(obj.receiverGender)
+    print(obj.receiverEmail)
+    print(obj.receiverForeign)
 except BarocertException as BE :
     print(BE.code)
     print(BE.message)
