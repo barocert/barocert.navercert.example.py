@@ -4,7 +4,7 @@
 네이버써트 API Python SDK Example
 
 - Python SDK 연동환경 설정방법 안내 : https://developers.barocert.com/guide/naver/identity/python/getting-started/tutorial
-- 업데이트 일자 : 2023-10-31
+- 업데이트 일자 : 2023-11-06
 - 연동 기술지원 연락처 : 1600-9854
 - 연동 기술지원 이메일 : code@linkhubcorp.com
 
