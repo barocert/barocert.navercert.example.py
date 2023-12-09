@@ -32,7 +32,7 @@ identity = NaverIdentity(
     callCenterNum = '1588-1600',
     expireIn = 1000,
     # appUseYN = True,
-    # returnURL = 'navercert://sign',
+    # returnURL = 'navercert://identity',
     # deviceOSType = 'ANDROID'
 )
 

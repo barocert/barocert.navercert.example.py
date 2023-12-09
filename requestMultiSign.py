@@ -29,8 +29,10 @@ multiSignTokens = []
 for x in range(0,5):
     multiSignTokens.append(
         NaverMultiSignTokens( 
-            token = navercertService._encrypt("전자서명(복수) 요청 원문" + str(x)),
-            tokenType = "TEXT",
+            tokenType = 'TEXT',
+            token = navercertService._encrypt('전자서명(복수) 요청 원문' + str(x)),
+            # tokenType = 'HASH',
+            # token = navercertService._encrypt(navercertService._sha256('전자서명(복수) 요청 원문' + str(x))),
         )
     )    
 

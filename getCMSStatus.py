@@ -18,15 +18,15 @@ navercertService.IPRestrictOnOff = settings.IPRestrictOnOff
 navercertService.UseStaticIP = settings.UseStaticIP
 
 """
-전자서명(복수) 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
-https://developers.barocert.com/reference/naver/python/sign/api-multi#GetMultiSignStatus
+자동이체 출금동의 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
+https://developers.barocert.com/reference/naver/python/cms/api#GetCMSStatus
 """
 
 # 이용기관 코드
 clientCode = settings.ClientCode
 
-try :
-    obj = navercertService.getMultiSignStatus(clientCode, '02310310230900000210000000000009')
+try:
+    obj = navercertService.getCMSStatus(clientCode, '02310310230900000210000000000006')
     print(obj.receiptID)
     print(obj.clientCode)
     print(obj.state)

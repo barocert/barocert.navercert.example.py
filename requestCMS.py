@@ -18,32 +18,33 @@ navercertService.IPRestrictOnOff = settings.IPRestrictOnOff
 navercertService.UseStaticIP = settings.UseStaticIP
 
 """
-네이버 이용자에게 단건(1건) 문서의 전자서명을 요청합니다.
-https://developers.barocert.com/reference/naver/python/sign/api-single#RequestSign
+네이버 이용자에게 자동이체 출금동의를 요청합니다.
+https://developers.barocert.com/reference/naver/python/cms/api#RequestCMS
 """
 
 # 이용기관 코드
 clientCode = settings.ClientCode
 
-sign = NaverSign(        
+cms = NaverCMS(        
     receiverHP = navercertService._encrypt('01012341234'),
     receiverName = navercertService._encrypt('홍길동'),
     receiverBirthday = navercertService._encrypt('19700101'),
-    reqTitle = '전자서명(단건) 요청 메시지 제목',
-    reqMessage = navercertService._encrypt('전자서명(단건) 요청 메시지'),
+    reqTitle = '출금동의 요청 메시지 제목',
+    reqMessage = self.navercertService._encrypt('출금동의 요청 메시지'),
     callCenterNum = '1588-1600',
     expireIn = 1000,
-    tokenType = 'TEXT',
-    token = navercertService._encrypt('전자서명(단건) 요청 원문'),
-    # tokenType = 'HASH',
-    # token = navercertService._encrypt(navercertService._sha256('전자서명(단건) 요청 원문')),
+    requestCorp = self.navercertService._encrypt('청구기관'),    
+    bankName = self.navercertService._encrypt('출금은행'),    
+    bankAccountNum = self.navercertService._encrypt('123-456-7890'),    
+    bankAccountName = self.navercertService._encrypt('홍길동'),    
+    bankAccountBirthday = self.navercertService._encrypt('19700101'),    
     # appUseYN = True,
-    # returnURL = 'navercert://sign',
+    # returnURL = 'navercert://cms',
     # deviceOSType = 'ANDROID'
 )
 
-try :
-    obj = navercertService.requestSign(clientCode, sign)
+try:
+    obj = navercertService.requestCMS(clientCode, cms)
     print(obj.receiptID)
     print(obj.scheme)
     print(obj.marketUrl)
